@@ -45,6 +45,8 @@ class Category(TranslatedAutoSlugifyMixin, TranslationHelperMixin,
     treebeard's Nested Sets trees, which has the performance characteristics
     we're after, namely: fast reads at the expense of write-speed.
     """
+    id = models.AutoField(primary_key=True)
+
     slug_source_field_name = 'name'
 
     translations = TranslatedFields(
